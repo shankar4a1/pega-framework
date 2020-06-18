@@ -14,7 +14,7 @@ It includes sample UI test framework to support testing core Pega applications
 5. Test Results & Reporting
 6. Dependency injection using-Guice
 
-###### **Future enhaancements**
+###### **Future enhancements**
  1.  Updates to latest verisons (Cucumber 5.5.0,Sure fire latest verison,use gloable properties to define verisons etc)
  2. Remove Cuucmber jvm parallel plugin : Use Cucumber default feature
  3. Customize Cucumber report : Add claisifctaion files etc
