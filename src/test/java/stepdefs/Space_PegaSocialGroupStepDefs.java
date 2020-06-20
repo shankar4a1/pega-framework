@@ -48,7 +48,7 @@ public class Space_PegaSocialGroupStepDefs {
 
 	@When("^creates a new space with name \"([^\"]*)\"$")
 	public void user_creates_a_new_space_with_name(String name) {
-		this.name = MyAppObjectsBean.putTimeStampedValue(name); // putTimeStampedValue method appends a random time
+		//this.name = MyAppObjectsBean.putTimeStampedValue(name); // putTimeStampedValue method appends a random time
 																// stamp value to the end of given argument and stores
 																// it in a variable, it can be retrieved at a later
 																// stage using getTimeStampedValue using the same

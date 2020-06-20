@@ -5,7 +5,7 @@ import com.pega.crm.workobjects.Forecast;
 import com.pega.crm.workobjects.Space_PegaSocialGroup;
 import com.pega.crm.workobjects.Spaces;
 
-public class MyAppObjectsBean extends ObjectBean{
+public class MyAppObjectsBean implements ObjectBean{
 
 	private static Forecast forecast;
 	private static Spaces spaces;
@@ -35,4 +35,11 @@ public class MyAppObjectsBean extends ObjectBean{
 		MyAppObjectsBean.space_PegaSocialGroup = space_PegaSocialGroup;
 	}
 
+	public String putTimeStampedValue(String s) {
+		return null;
+	}
+
+	public String getTimestampedValue(String s) {
+		return null;
+	}
 }
