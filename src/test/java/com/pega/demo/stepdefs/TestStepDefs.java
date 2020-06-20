@@ -14,13 +14,13 @@
  * authorization from Pegasystems Inc.
 */
 
-package stepdefs;
+package com.pega.demo.stepdefs;
 
 import com.google.inject.Inject;
 import com.pega.TestEnvironment;
 import com.pega.framework.PegaWebDriver;
-import com.pega.test.pega_sample_testframework.MyAppBrowser;
-import com.pega.test.pega_sample_testframework.MyAppTestEnvironment;
+import com.pega.demo.MyAppBrowser;
+import com.pega.demo.MyAppTestEnvironment;
 
 import cucumber.api.java.en.Given;
 import cucumber.runtime.java.guice.ScenarioScoped;
@@ -28,7 +28,7 @@ import cucumber.runtime.java.guice.ScenarioScoped;
 @ScenarioScoped
 public class TestStepDefs {
 	TestEnvironment testEnv;
-	com.pega.test.pega_sample_testframework.MyAppBrowser browser;
+	MyAppBrowser browser;
 	private PegaWebDriver pegaDriver;
 
 	@Inject

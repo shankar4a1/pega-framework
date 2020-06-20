@@ -13,9 +13,34 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<tags>@smoke</tags>
-		<baseClass>com.pega.test.pega_sample_testframework.MyAppTestEnvironment</baseClass>
-		<threadCount>2</threadCount>
+		<tags>@dev</tags>
+		<baseClass>MyAppTestEnvironment</baseClass>
+		<threadCount>3</threadCount>
+		<!--<added :GS>-->
+		<!--<rest.assured.verion>3.2.0</rest.assured.verion>-->
+		<cucumber.version>4.4.0</cucumber.version>
+		<guice.version>3.0</guice.version>
+		<selenium.webdriver.version>3.141.59</selenium.webdriver.version>
+		<testng.version>6.8.8</testng.version>
+		<jayway.rest.version>2.9.0</jayway.rest.version>
+		<!--<jackson.verion>2.10.0</jackson.verion>-->
+		<maven.surefire.plugin.version>3.0.0-M4</maven.surefire.plugin.version>
+		<maven.cucumber.reporting.version>4.6.0</maven.cucumber.reporting.version>
+		<maven.compiler.version>3.8.1</maven.compiler.version>
+		<!--<surefire.fork.count>6</surefire.fork.count>-->
+		<java.version>1.8</java.version>
+		<testFailureIgnore>true</testFailureIgnore>
+		<build.number>1.1</build.number>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MM-dd-HH_mm</maven.build.timestamp.format>
+		<!--Classification values -->
+		<environment>SIT</environment>
+		<!--<url>temp</url>-->
+		<browserName>chrome</browserName>
+		<platform>Windows</platform>
+
+		<!--<added :GS>-->
+
 	</properties>
 
 	<profiles>
@@ -33,7 +58,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.22.0</version>
+						<version>${maven.surefire.plugin.version}</version>
 						<configuration>
 							<systemPropertyVariables>
 								<runMode>Cucumber-OneStepDef</runMode>
@@ -93,7 +118,7 @@
 					<plugin>
 						<groupId>net.masterthought</groupId>
 						<artifactId>maven-cucumber-reporting</artifactId>
-						<version>4.5.0</version>
+						<version>${maven.cucumber.reporting.version}</version>
 						<executions>
 							<execution>
 								<id>execution</id>
@@ -102,13 +127,65 @@
 									<goal>generate</goal>
 								</goals>
 								<configuration>
-									<projectName>CucumberWebGui</projectName>
-									<outputDirectory>${project.build.directory}</outputDirectory>
+									<projectName>demo</projectName>
+									<buildNumber> ${build.number}</buildNumber>
+									<classifications>
+										<Platform>${platform}</Platform>
+										<Browser>${browserName}</Browser>
+										<Environment>${environment}</Environment>
+										<!-- <URL>${url}</URL>-->
+									</classifications>
+									<outputDirectory>Reports/${timestamp}</outputDirectory>
 									<inputDirectory>${project.build.directory}</inputDirectory>
 									<jsonFiles>
 										<jsonFile>cucumber-report.json</jsonFile>
 									</jsonFiles>
+
 									<checkBuildResult>false</checkBuildResult>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+
+				<!--	<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.6.0</version>
+						<executions>
+							<execution>
+								<id>ReportGenerator</id>
+								<phase>test</phase>
+								<goals>
+									<goal>java</goal>
+								</goals>
+								<configuration>
+									<classpathScope>test</classpathScope>
+									<mainClass>com.pega.demo.utility.ReportGenerator</mainClass>
+									<arguments>
+										<argument>${project.build.directory}/cucumber-report.json</argument>
+									</arguments>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>-->
+
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.6.0</version>
+						<executions>
+							<execution>
+								<id>test-execution-summary</id>
+								<phase>test</phase>
+								<goals>
+									<goal>java</goal>
+								</goals>
+								<configuration>
+									<classpathScope>test</classpathScope>
+									<mainClass>com.pega.demo.utility.ExecutionSummary</mainClass>
+									<arguments>
+										<argument>${project.build.directory}/cucumber-report.json</argument>
+									</arguments>
 								</configuration>
 							</execution>
 						</executions>
@@ -122,12 +199,7 @@
 
 
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>com.pega.test</groupId>
 			<artifactId>pega-base-ui-testframework</artifactId>
@@ -135,11 +207,84 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/pega-base-ui-testframework-2.1.1.jar</systemPath>
 		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>5.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-guice -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-guice</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>${guice.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.141.59</version>
+			<version>${selenium.webdriver.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${jayway.rest.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.jayway.restassured/json-schema-validator -->
+		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>${jayway.rest.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+
 		<dependency>
 			<groupId>net.sf.json-lib</groupId>
 			<artifactId>json-lib</artifactId>
@@ -152,12 +297,8 @@
 			<version>1.0</version>
 			<scope>compile</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.8.8</version>
-			<scope>compile</scope>
-		</dependency>
+
+
 
 		<dependency>
 			<groupId>org.jsoup</groupId>
@@ -187,11 +328,6 @@
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>5.0.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.opencsv</groupId>
-			<artifactId>opencsv</artifactId>
-			<version>3.8</version>
 		</dependency>
 
 		<dependency>
@@ -231,89 +367,23 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.6</version>
 		</dependency>
-		<dependency>
-			<groupId>com.google.inject</groupId>
-			<artifactId>guice</artifactId>
-			<version>3.0</version>
-		</dependency>
 
 
 
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>gherkin</artifactId>
-			<version>5.1.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-core</artifactId>
-			<version>4.4.0</version>
-		</dependency>
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-java</artifactId>
-			<version>4.4.0</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-testng</artifactId>
-			<version>4.4.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-junit</artifactId>
-			<version>4.4.0</version>
-			<scope>test</scope>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-guice -->
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-guice</artifactId>
-			<version>4.4.0</version>
-		</dependency>
-
-
-
-
-		<!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
-
-
-
-
-		<dependency>
+    	<dependency>
 			<groupId>com.opencsv</groupId>
 			<artifactId>opencsv</artifactId>
 			<version>3.9</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.8.8</version>
-			<scope>compile</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>org.apache.maven.plugin-tools</groupId>
 			<artifactId>maven-plugin-annotations</artifactId>
 			<version>3.2</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.jayway.restassured</groupId>
-			<artifactId>rest-assured</artifactId>
-			<version>2.9.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.jayway.restassured/json-schema-validator -->
-		<dependency>
-			<groupId>com.jayway.restassured</groupId>
-			<artifactId>json-schema-validator</artifactId>
-			<version>2.9.0</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>htmlunit-driver</artifactId>
@@ -325,43 +395,23 @@
 			<artifactId>phantomjsdriver</artifactId>
 			<version>1.1.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>5.3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20180813</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
+		</dependency>
 	</dependencies>
-	<build>
-		<pluginManagement>
-			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											com.github.temyers
-										</groupId>
-										<artifactId>
-											cucumber-jvm-parallel-plugin
-										</artifactId>
-										<versionRange>
-											[1.3.0,)
-										</versionRange>
-										<goals>
-											<goal>generateRunners</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+
 </project>

@@ -1,4 +1,4 @@
-package com.pega.crm.portal;
+package com.pega.demo.portal;
 
 import org.openqa.selenium.By;
 

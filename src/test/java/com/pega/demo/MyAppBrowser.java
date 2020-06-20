@@ -1,12 +1,15 @@
-package com.pega.test.pega_sample_testframework;
+package com.pega.demo;
 
+import com.pega.util.DataUtil;
+import com.pega.util.GlobalConstants;
+import com.pega.util.ScreenshotUtil;
 import org.openqa.selenium.By;
 
 import com.google.inject.Inject;
 import com.pega.BrowserImpl;
 import com.pega.Configuration;
-import com.pega.crm.portal.SalesAutomationPortal;
-import com.pega.crm.portal.SalesRepPortal;
+import com.pega.demo.portal.SalesAutomationPortal;
+import com.pega.demo.portal.SalesRepPortal;
 import com.pega.page.Portal;
 
 import cucumber.api.java.en.Given;
@@ -51,6 +54,7 @@ public class MyAppBrowser extends BrowserImpl {
 	public void login(String username, String password) {
 		open();
 		super.login(username, password);
+		;
 	}
 
 	@When("^User logs off from portal$")
