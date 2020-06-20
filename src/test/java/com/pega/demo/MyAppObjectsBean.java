@@ -1,9 +1,10 @@
-package com.pega.test.pega_sample_testframework;
+package com.pega.demo;
 
 import com.pega.config.ObjectBean;
-import com.pega.crm.workobjects.Forecast;
-import com.pega.crm.workobjects.Space_PegaSocialGroup;
-import com.pega.crm.workobjects.Spaces;
+import com.pega.demo.workobjects.Forecast;
+import com.pega.demo.workobjects.Space_PegaSocialGroup;
+import com.pega.demo.workobjects.Spaces;
+
 
 public class MyAppObjectsBean implements ObjectBean{
 

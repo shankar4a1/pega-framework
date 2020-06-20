@@ -14,17 +14,18 @@
  * authorization from Pegasystems Inc.
 */
 
-package stepdefs;
+package com.pega.demo.stepdefs;
 
+import com.pega.demo.workobjects.Space_PegaSocialGroup;
 import org.testng.Assert;
 
 import com.google.inject.Inject;
 import com.pega.TestEnvironment;
-import com.pega.crm.workobjects.Space_PegaSocialGroup;
+
 import com.pega.framework.PegaWebDriver;
-import com.pega.test.pega_sample_testframework.MyAppBrowser;
-import com.pega.test.pega_sample_testframework.MyAppObjectsBean;
-import com.pega.test.pega_sample_testframework.MyAppTestEnvironment;
+import com.pega.demo.MyAppBrowser;
+import com.pega.demo.MyAppObjectsBean;
+import com.pega.demo.MyAppTestEnvironment;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -33,7 +34,7 @@ import cucumber.runtime.java.guice.ScenarioScoped;
 @ScenarioScoped
 public class Space_PegaSocialGroupStepDefs {
 	TestEnvironment testEnv;
-	com.pega.test.pega_sample_testframework.MyAppBrowser browser;
+	MyAppBrowser browser;
 	private PegaWebDriver pegaDriver;
 	private Space_PegaSocialGroup space_PegaSocialGroup;
 	private String name;

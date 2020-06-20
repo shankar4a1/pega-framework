@@ -14,39 +14,49 @@
  * authorization from Pegasystems Inc.
 */
 
-package stepdefs;
+package com.pega.demo.stepdefs;
+
+import com.pega.demo.workobjects.Forecast;
+import org.testng.Assert;
 
 import com.google.inject.Inject;
 import com.pega.TestEnvironment;
-import com.pega.crm.workobjects.Space_PegaSocialGroup;
-import com.pega.crm.workobjects.Spaces;
-import com.pega.framework.PegaWebDriver;
-import com.pega.test.pega_sample_testframework.MyAppBrowser;
-import com.pega.test.pega_sample_testframework.MyAppObjectsBean;
-import com.pega.test.pega_sample_testframework.MyAppTestEnvironment;
 
+import com.pega.framework.PegaWebDriver;
+import com.pega.demo.MyAppBrowser;
+import com.pega.demo.MyAppObjectsBean;
+import com.pega.demo.MyAppTestEnvironment;
+
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.runtime.java.guice.ScenarioScoped;
 
 @ScenarioScoped
-public class SpacesStepDefs {
+public class ForecastStepDefs {
 	TestEnvironment testEnv;
-	com.pega.test.pega_sample_testframework.MyAppBrowser browser;
+	MyAppBrowser browser;
 	private PegaWebDriver pegaDriver;
-	private Spaces spaces;
+	private Forecast forecast;
 
 	@Inject
-	public SpacesStepDefs(MyAppTestEnvironment testEnv) {
+	public ForecastStepDefs(MyAppTestEnvironment testEnv) {
 		this.testEnv = testEnv;
 		pegaDriver = testEnv.getPegaDriver();
 		browser = (MyAppBrowser) testEnv.getBrowser();
 
 	}
 
-	@When("^user navigates to new space wizard$")
-	public void user_creates_a_new_space_with_name() {
-		spaces = MyAppObjectsBean.getSpaces();
-		Space_PegaSocialGroup space_PegaSocialGroup = spaces.createSpace();
-		MyAppObjectsBean.setSpace_PegaSocialGroup(space_PegaSocialGroup);
+	@When("^switches to close plans tab$")
+	public void switches_to_close_plans_tab() {
+		forecast = MyAppObjectsBean.getForecast(); // This is the object that was set in SalesManagerStepDefs while
+													// opening the forecast page
+		forecast.switchToClosePlans();
+
 	}
+
+	@Then("^close plans view should be available$")
+	public void close_plans_view_should_be_available() {
+		Assert.assertTrue(forecast.verifyElement(Forecast.CLOSE_PLANS_TAB_SELECTED));
+	}
+
 }

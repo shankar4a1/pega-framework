@@ -1,10 +1,11 @@
-package com.pega.crm.portal;
+package com.pega.demo.portal;
 
+import com.pega.demo.workobjects.Forecast;
+import com.pega.demo.workobjects.Spaces;
 import org.openqa.selenium.By;
 
 import com.pega.TestEnvironment;
-import com.pega.crm.workobjects.Forecast;
-import com.pega.crm.workobjects.Spaces;
+
 import com.pega.framework.PegaWebElement;
 import com.pega.page.PortalImpl;
 

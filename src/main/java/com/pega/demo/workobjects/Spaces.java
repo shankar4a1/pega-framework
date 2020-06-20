@@ -1,4 +1,4 @@
-package com.pega.crm.workobjects;
+package com.pega.demo.workobjects;
 
 import org.openqa.selenium.By;
 

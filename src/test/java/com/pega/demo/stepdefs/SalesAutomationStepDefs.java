@@ -14,17 +14,18 @@
  * authorization from Pegasystems Inc.
 */
 
-package stepdefs;
+package com.pega.demo.stepdefs;
 
 import com.google.inject.Inject;
 import com.pega.TestEnvironment;
-import com.pega.crm.portal.SalesAutomationPortal;
-import com.pega.crm.workobjects.Forecast;
-import com.pega.crm.workobjects.Spaces;
+import com.pega.demo.portal.SalesAutomationPortal;
+
+import com.pega.demo.workobjects.Forecast;
+import com.pega.demo.workobjects.Spaces;
 import com.pega.framework.PegaWebDriver;
-import com.pega.test.pega_sample_testframework.MyAppBrowser;
-import com.pega.test.pega_sample_testframework.MyAppObjectsBean;
-import com.pega.test.pega_sample_testframework.MyAppTestEnvironment;
+import com.pega.demo.MyAppBrowser;
+import com.pega.demo.MyAppObjectsBean;
+import com.pega.demo.MyAppTestEnvironment;
 
 import cucumber.api.java.en.When;
 import cucumber.runtime.java.guice.ScenarioScoped;
@@ -32,7 +33,7 @@ import cucumber.runtime.java.guice.ScenarioScoped;
 @ScenarioScoped
 public class SalesAutomationStepDefs {
 	TestEnvironment testEnv;
-	com.pega.test.pega_sample_testframework.MyAppBrowser browser;
+	MyAppBrowser browser;
 	private PegaWebDriver pegaDriver;
 	private SalesAutomationPortal salesManagerPortal;
 

@@ -1,4 +1,4 @@
-package com.pega.test.pega_sample_testframework;
+package com.pega.demo;
 
 import com.google.inject.Inject;
 import com.pega.Browser;
@@ -8,6 +8,7 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.runtime.java.guice.ScenarioScoped;
+
 
 @ScenarioScoped
 public class MyAppTestEnvironment extends TestBase{
@@ -43,9 +44,13 @@ public class MyAppTestEnvironment extends TestBase{
 
 	@After
 	public void tearDown(Scenario scenario) {
+
 		tearDown(scenario, true, alwaysSaveVideo);
+
+
 	}
-	
+
+
 	public Scenario getScenario()
 	{
 		return scenario;
