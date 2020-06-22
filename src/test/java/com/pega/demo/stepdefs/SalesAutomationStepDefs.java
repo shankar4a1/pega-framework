@@ -27,8 +27,10 @@ import com.pega.demo.MyAppBrowser;
 import com.pega.demo.MyAppObjectsBean;
 import com.pega.demo.MyAppTestEnvironment;
 
-import cucumber.api.java.en.When;
-import cucumber.runtime.java.guice.ScenarioScoped;
+import io.cucumber.guice.ScenarioScoped;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
 
 @ScenarioScoped
 public class SalesAutomationStepDefs {

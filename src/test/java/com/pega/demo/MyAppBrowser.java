@@ -3,6 +3,7 @@ package com.pega.demo;
 import com.pega.util.DataUtil;
 import com.pega.util.GlobalConstants;
 import com.pega.util.ScreenshotUtil;
+import io.cucumber.java.en.Given;
 import org.openqa.selenium.By;
 
 import com.google.inject.Inject;
@@ -12,9 +13,9 @@ import com.pega.demo.portal.SalesAutomationPortal;
 import com.pega.demo.portal.SalesRepPortal;
 import com.pega.page.Portal;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import cucumber.runtime.java.guice.ScenarioScoped;
+import io.cucumber.guice.ScenarioScoped;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 @ScenarioScoped
 public class MyAppBrowser extends BrowserImpl {
@@ -54,6 +55,7 @@ public class MyAppBrowser extends BrowserImpl {
 	public void login(String username, String password) {
 		open();
 		super.login(username, password);
+		myAppTestEnv.takeScreenshot();
 		System.out.println(testEnv.getConfiguration().getProperty("ADMIN_USER_ID"));
 		System.out.println(testEnv.getConfiguration().getProperty("ADMIN_USER_ID"));
 

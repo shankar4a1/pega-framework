@@ -18,7 +18,7 @@
 		<threadCount>3</threadCount>
 		<!--<added :GS>-->
 		<!--<rest.assured.verion>3.2.0</rest.assured.verion>-->
-		<cucumber.version>4.4.0</cucumber.version>
+		<cucumber.version>5.5.0</cucumber.version>
 		<guice.version>3.0</guice.version>
 		<selenium.webdriver.version>3.141.59</selenium.webdriver.version>
 		<testng.version>6.8.8</testng.version>

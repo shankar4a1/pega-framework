@@ -17,6 +17,9 @@
 package com.pega.demo.stepdefs;
 
 import com.pega.demo.workobjects.Forecast;
+import io.cucumber.guice.ScenarioScoped;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.testng.Assert;
 
 import com.google.inject.Inject;
@@ -27,9 +30,7 @@ import com.pega.demo.MyAppBrowser;
 import com.pega.demo.MyAppObjectsBean;
 import com.pega.demo.MyAppTestEnvironment;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import cucumber.runtime.java.guice.ScenarioScoped;
+
 
 @ScenarioScoped
 public class ForecastStepDefs {

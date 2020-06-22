@@ -9,7 +9,8 @@ import com.pega.TestEnvironment;
 import com.pega.demo.MyAppBrowser;
 import com.pega.demo.MyAppTestEnvironment;
 import com.pega.framework.PegaWebDriver;
-import cucumber.runtime.java.guice.ScenarioScoped;
+
+import io.cucumber.guice.ScenarioScoped;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import net.masterthought.cucumber.Reportable;

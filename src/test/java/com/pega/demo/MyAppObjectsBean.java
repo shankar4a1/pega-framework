@@ -5,7 +5,11 @@ import com.pega.demo.workobjects.Forecast;
 import com.pega.demo.workobjects.Space_PegaSocialGroup;
 import com.pega.demo.workobjects.Spaces;
 import com.pega.util.DataUtil;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
+import java.io.File;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -61,5 +65,7 @@ public class MyAppObjectsBean {
 			return name;
 		}
 	}
+
+
 
 }
