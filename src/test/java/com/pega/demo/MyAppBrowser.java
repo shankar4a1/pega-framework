@@ -54,7 +54,9 @@ public class MyAppBrowser extends BrowserImpl {
 	public void login(String username, String password) {
 		open();
 		super.login(username, password);
-		;
+		System.out.println(testEnv.getConfiguration().getProperty("ADMIN_USER_ID"));
+		System.out.println(testEnv.getConfiguration().getProperty("ADMIN_USER_ID"));
+
 	}
 
 	@When("^User logs off from portal$")
