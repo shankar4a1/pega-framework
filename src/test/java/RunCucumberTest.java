@@ -1,15 +1,23 @@
-import org.testng.annotations.DataProvider;
-
-import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.*;
+import org.testng.annotations.*;
 
 
-@CucumberOptions()
+@CucumberOptions(
+
+        /* features = {"src/test/resources/features"},
+
+         monochrome = true,
+         plugin = "message:target/cucumber-report.ndjson",
+         tags = "@dev"*/
+)
 public class RunCucumberTest extends AbstractTestNGCucumberTests {
-	@Override
+
+
+    @Override
     @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return super.scenarios();
     }
+
 
 }

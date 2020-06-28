@@ -18,7 +18,7 @@
   								</goals>
   								<configuration>
   									<classpathScope>test</classpathScope>
-  									<mainClass>com.pega.demo.utility.ReportGenerator</mainClass>
+  									<mainClass>ReportGenerator</mainClass>
   									<arguments>
   										<argument>${project.build.directory}/cucumber-report.json</argument>
   									</arguments>

@@ -11,6 +11,19 @@
 	<name>pega-sample-testframework</name>
 	<url>http://maven.apache.org</url>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>8</source>
+					<target>8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<tags>@dev</tags>
@@ -18,14 +31,14 @@
 		<threadCount>3</threadCount>
 		<!--<added :GS>-->
 		<!--<rest.assured.verion>3.2.0</rest.assured.verion>-->
-		<cucumber.version>4.4.0</cucumber.version>
+		<cucumber.version>5.7.0</cucumber.version>
 		<guice.version>3.0</guice.version>
 		<selenium.webdriver.version>3.141.59</selenium.webdriver.version>
 		<testng.version>6.8.8</testng.version>
 		<jayway.rest.version>2.9.0</jayway.rest.version>
 		<!--<jackson.verion>2.10.0</jackson.verion>-->
 		<maven.surefire.plugin.version>3.0.0-M4</maven.surefire.plugin.version>
-		<maven.cucumber.reporting.version>4.6.0</maven.cucumber.reporting.version>
+		<maven.cucumber.reporting.version>5.3.0</maven.cucumber.reporting.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<!--<surefire.fork.count>6</surefire.fork.count>-->
 		<java.version>1.8</java.version>
@@ -79,8 +92,10 @@
 								--plugin pretty
 								--plugin
 								json:target/cucumber-report.json"
+								<!-- message:target/cucumber-report.ndjson"-->
 								-Dfile.encoding=UTF-8
-								-DbaseClass="${baseClass}"</argLine>
+								-DbaseClass="${baseClass}"
+							</argLine>
 						</configuration>
 					</plugin>
 					<plugin>
@@ -138,6 +153,7 @@
 									<outputDirectory>Reports/${timestamp}</outputDirectory>
 									<inputDirectory>${project.build.directory}</inputDirectory>
 									<jsonFiles>
+										<!--<jsonFile>cucumber-report.ndjson</jsonFile>-->
 										<jsonFile>cucumber-report.json</jsonFile>
 									</jsonFiles>
 
@@ -160,7 +176,7 @@
 								</goals>
 								<configuration>
 									<classpathScope>test</classpathScope>
-									<mainClass>com.pega.demo.utility.ReportGenerator</mainClass>
+									<mainClass>ReportGenerator</mainClass>
 									<arguments>
 										<argument>${project.build.directory}/cucumber-report.json</argument>
 									</arguments>
@@ -182,7 +198,7 @@
 								</goals>
 								<configuration>
 									<classpathScope>test</classpathScope>
-									<mainClass>com.pega.demo.utility.ExecutionSummary</mainClass>
+									<mainClass>com.pega.utility.ExecutionSummary</mainClass>
 									<arguments>
 										<argument>${project.build.directory}/cucumber-report.json</argument>
 									</arguments>
@@ -197,16 +213,22 @@
 	</profiles>
 
 
-
 	<dependencies>
 
-		<dependency>
-			<groupId>com.pega.test</groupId>
-			<artifactId>pega-base-ui-testframework</artifactId>
-			<version>2.1.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/pega-base-ui-testframework-2.1.1.jar</systemPath>
-		</dependency>
+		<!--	<dependency>
+                <groupId>com.pega.test</groupId>
+                <artifactId>pega-base-ui-testframework</artifactId>
+                <version>2.1.1</version>
+                <scope>system</scope>
+                <systemPath>${project.basedir}/lib/pega-base-ui-testframework-2.1.1.jar</systemPath>
+            </dependency>-->
+		<!--	<dependency>
+                <groupId>com.pega.test</groupId>
+                <artifactId>pega-base-ui-testframework</artifactId>
+                <version>2.1.1</version>
+                <scope>system</scope>
+                <systemPath>${project.basedir}/lib/pega-core.jar</systemPath>
+            </dependency>-->
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -223,8 +245,10 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>${cucumber.version}</version>
-			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+
+
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -411,6 +435,13 @@
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
 			<version>1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
