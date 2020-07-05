@@ -11,8 +11,8 @@ import java.util.*;
 import java.util.regex.*;
 
 public class FetchPRPCLogs {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: FetchPRPCLogs.java 174698 2016-02-08 08:24:26Z SachinVellanki $";
+
+
     private final String USER_AGENT = "Mozilla/5.0";
     private HttpURLConnection con;
     String url;
@@ -23,7 +23,6 @@ public class FetchPRPCLogs {
     private boolean repeat;
 
     public FetchPRPCLogs() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
         this.url = "http://vengwindb192:9892/prweb/PRServlet";
         this.currentResponseMessage = null;
     }

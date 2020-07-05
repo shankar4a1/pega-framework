@@ -11,8 +11,7 @@ import org.openqa.selenium.*;
 import java.util.*;
 
 public interface TopDocument {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: PegaWebDriver.java 174698 2016-02-08 08:24:26Z SachinVellanki $";
+
 
     PegaWebElement findElement(final By p0);
 

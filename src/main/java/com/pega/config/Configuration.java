@@ -17,13 +17,13 @@ import java.util.*;
 import java.util.regex.*;
 
 public class Configuration {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: Configuration.java 208557 2016-09-08 05:18:51Z SachinVellanki $";
+
+
     private Properties globalProperties;
     private File globalPropertiesFile;
 
     public Configuration() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static void main(final String[] args) throws IOException {

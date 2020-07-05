@@ -18,8 +18,8 @@ import java.net.*;
 import java.util.*;
 
 public class PostBuildTasks {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: PostBuildTasks.java 208709 2016-09-13 06:53:08Z PrashantSammeta $";
+
+
     private String jenkinsURL;
     private String teamName;
     private String buildId;
@@ -54,7 +54,7 @@ public class PostBuildTasks {
     private String color;
 
     public PostBuildTasks() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
         this.color = "white";
     }
 

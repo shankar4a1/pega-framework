@@ -16,7 +16,7 @@ import java.util.*;
 import java.util.function.*;
 
 public class FrameImpl implements Frame {
-    private static final String VERSION = "$Id: FrameImpl.java 188865 2016-04-22 10:38:15Z VenkatasrikarVadlamudi $";
+
     private static final Logger LOGGER;
     private String frameDoc;
     private WebDriver driver;
@@ -140,6 +140,8 @@ public class FrameImpl implements Frame {
     private void switchToCurrentFrame() {
         if (GlobalConstants.getCURRENT_FRAME_BY() == null || GlobalConstants.getCURRENT_FRAME_BY() != this.by) {
             this.pegaDriver.switchTo().defaultContent();
+            //altered by SG
+            this.pegaDriver.switchTo().frame("FormFactoriFrame");
             for (final By frame : this.frames) {
                 final WebElement element = this.pegaDriver.getDriver().findElement(frame);
                 this.pegaDriver.switchTo().frame(element);

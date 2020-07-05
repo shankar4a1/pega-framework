@@ -14,7 +14,7 @@ import java.util.*;
 import java.util.function.*;
 
 public class BrowserImpl implements Browser {
-    private static final String VERSION = "$Id: BrowserImpl.java 209311 2016-09-30 12:55:53Z AnilBattinapati $";
+
     private static final Logger LOGGER;
     protected PegaWebDriver pegaDriver;
     protected WebDriver driver;

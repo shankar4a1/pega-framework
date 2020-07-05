@@ -16,8 +16,8 @@ import java.lang.reflect.*;
 import java.util.*;
 
 public abstract class LegacyTestBase {
-    private static final String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    private static final String VERSION = "$Id: TestBase.java 140339 2015-06-16 12:56:14Z SachinVellanki $";
+
+
     private static TestEnvironment testEnv;
     private static Configuration configuration;
     private static Browser browser;

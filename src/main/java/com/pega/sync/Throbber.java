@@ -12,8 +12,8 @@ import java.util.*;
 import java.util.function.*;
 
 public class Throbber {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: Throbber.java 164932 2015-11-23 13:49:36Z BalanaveenreddyKappeta $";
+
+
     private static final Logger LOGGER;
     private PegaWebDriver pegaWebDriver;
 
@@ -22,7 +22,7 @@ public class Throbber {
     }
 
     public Throbber(final PegaWebDriver pegaWebDriver) {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
         this.pegaWebDriver = pegaWebDriver;
     }
 

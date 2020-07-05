@@ -21,7 +21,7 @@ import java.io.*;
 import java.util.*;
 
 public class TestEnvironmentImpl implements TestEnvironment {
-    private static final String VERSION = "$Id: TestEnvironmentImpl.java 209038 2016-09-22 09:24:46Z SachinVellanki $";
+
     private static final Logger LOGGER;
     private PegaWebDriver pegaDriver;
     private WebDriver driver;

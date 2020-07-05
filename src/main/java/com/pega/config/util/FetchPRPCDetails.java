@@ -5,11 +5,10 @@ package com.pega.config.util;
 import java.util.regex.*;
 
 public class FetchPRPCDetails {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: FetchPRPCDetails.java 208617 2016-09-09 09:29:52Z BalanaveenreddyKappeta $";
+
 
     public FetchPRPCDetails() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     private String fetchSysInfo(final String url) throws Exception {

@@ -7,7 +7,7 @@ import org.openqa.selenium.*;
 import org.slf4j.*;
 
 public class ScriptExecutorImpl implements ScriptExecutor {
-    private static final String VERSION = "$Id: ScriptExecutorImpl.java 178345 2016-02-25 14:12:15Z BalanaveenreddyKappeta $";
+
     private static final Logger LOGGER;
     private WebDriver driver;
     private JavascriptExecutor jsExecutor;

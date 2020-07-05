@@ -4,11 +4,11 @@ import org.testng.annotations.*;
 
 @CucumberOptions(
 
-        /* features = {"src/test/resources/features"},
+        features = {"src/test/resources/features"},
 
-         monochrome = true,
-         plugin = "message:target/cucumber-report.ndjson",
-         tags = "@dev"*/
+        monochrome = true,
+        /* plugin = "message:target/cucumber-report.ndjson",*/
+        tags = "@dev"
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests {
 

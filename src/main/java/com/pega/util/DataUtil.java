@@ -16,8 +16,8 @@ import java.security.*;
 import java.util.regex.*;
 
 public class DataUtil {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: DataUtil.java 194486 2016-05-25 11:47:44Z ShakkariSakethkumar $";
+
+
     private static final Logger LOGGER;
 
     static {
@@ -25,7 +25,7 @@ public class DataUtil {
     }
 
     public DataUtil() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static String getRandomNumberString(final String value) {

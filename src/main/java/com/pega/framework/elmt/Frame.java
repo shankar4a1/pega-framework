@@ -9,8 +9,7 @@ import org.openqa.selenium.*;
 import java.util.*;
 
 public interface Frame {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: Frame.java 188865 2016-04-22 10:38:15Z VenkatasrikarVadlamudi $";
+
 
     TestEnvironment getTestEnvironment();
 

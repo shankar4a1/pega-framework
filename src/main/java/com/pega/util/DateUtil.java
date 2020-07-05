@@ -6,11 +6,10 @@ import java.text.*;
 import java.util.*;
 
 public class DateUtil {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: DataUtil.java 194486 2016-05-25 11:47:44Z ShakkariSakethkumar $";
+
 
     public DateUtil() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static String getCurrentMonth() {

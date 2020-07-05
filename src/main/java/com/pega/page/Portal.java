@@ -10,8 +10,7 @@ import org.openqa.selenium.*;
 import java.util.*;
 
 public interface Portal {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: Portal.java 186528 2016-04-09 12:01:15Z SachinVellanki $";
+
 
     String getTitle();
 

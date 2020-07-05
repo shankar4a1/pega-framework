@@ -6,11 +6,10 @@ import java.io.*;
 import java.net.*;
 
 public class FailureAnalyzer {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: FailureAnalyzer.java 136968 2015-05-20 15:21:24Z ShakkariSakethkumar $";
+
 
     public FailureAnalyzer() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static void main(final String[] a) throws IOException {

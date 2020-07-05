@@ -15,11 +15,10 @@ import java.nio.charset.*;
 import java.util.*;
 
 public class MailUtil {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: MailUtil.java 207998 2016-08-22 13:40:29Z VenkatasrikarVadlamudi $";
+
 
     public MailUtil() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static String readNewMail(final Host mailHost, final String userName, final String password, final String subjectMatch, final String downloadDirForAttchmnts, final Timeout timeout) {

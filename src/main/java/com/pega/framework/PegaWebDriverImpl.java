@@ -16,7 +16,7 @@ import java.util.*;
 import java.util.regex.*;
 
 public class PegaWebDriverImpl implements PegaWebDriver {
-    private static final String VERSION = "$Id: PegaWebDriverImpl.java 195418 2016-06-01 08:59:34Z AnilBattinapati $";
+
     private static final Logger LOGGER;
     private static Set<String> uniqueReturnElements;
     protected WebDriver driver;
@@ -255,6 +255,9 @@ public class PegaWebDriverImpl implements PegaWebDriver {
     @Override
     public String getActiveFrameId(final boolean switchToActiveFrame) {
         this.driver.switchTo().defaultContent();
+        //altered by SG
+        this.driver.switchTo().frame("FormFactoriFrame");
+
         WebElement activeFrame = null;
         final long startTime = Calendar.getInstance().getTimeInMillis();
         Object isLoaded = null;
@@ -295,10 +298,14 @@ public class PegaWebDriverImpl implements PegaWebDriver {
             }
         }
         this.driver.switchTo().defaultContent();
+        //altered by SG
+        this.driver.switchTo().frame("FormFactoriFrame");
         if (isTabPresent) {
             this.handleWaits().waitForFramesToBeLoaded();
         }
         this.driver.switchTo().defaultContent();
+        //altered by SG
+        this.driver.switchTo().frame("FormFactoriFrame");
         String frameId = null;
         try {
             activeFrame = this.driver.findElement(By.xpath(GlobalRepo.getActiveFrameXpath()));
@@ -525,6 +532,8 @@ public class PegaWebDriverImpl implements PegaWebDriver {
     @Override
     public void switchToActiveFrame(final LinkedHashSet<By> frames) {
         this.driver.switchTo().defaultContent();
+        //altered by SG
+        this.driver.switchTo().frame("FormFactoriFrame");
         if (frames != null) {
             for (final By frame : frames) {
                 final WebElement element = this.driver.findElement(frame);

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.*;
 
 public class MouseImpl implements Mouse {
-    private static final String VERSION = "$Id: MouseImpl.java 121818 2015-01-26 07:18:23Z SachinVellanki $";
+
     private static final Logger LOGGER;
     private int lastX;
     private int lastY;

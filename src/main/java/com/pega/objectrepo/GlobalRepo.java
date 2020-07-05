@@ -3,7 +3,7 @@
 package com.pega.objectrepo;
 
 public class GlobalRepo {
-    private static final String VERSION = "$Id: GlobalRepository.java 205797 2016-07-28 14:44:02Z SachinVellanki $";
+
     private static final String ACTIVE_FRAME_XPATH = "//div[contains(@id, 'PegaWebGadget') and @style='display: block;']/iframe|//div[contains(@id,'module') and contains(@style,'block')]/div[contains(@id,'PegaWebGadget')]/iframe[contains(@id,'PegaGadget')]|//div[contains(@data-pega-gadgetname,'PegaGadget')]/iframe[contains(@id,'PegaGadget')]";
     public static final String TABLESS_ACTIVE_FRAME_XPATH = "(//iframe[contains(@id,'PegaGadget')])[last()]";
     public static final String THROBBER__XPATH = "//*[@class='throbber']";

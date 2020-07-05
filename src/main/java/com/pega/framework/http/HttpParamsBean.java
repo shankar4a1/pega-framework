@@ -3,15 +3,15 @@
 package com.pega.framework.http;
 
 public class HttpParamsBean {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: HttpParamsBean.java 207810 2016-08-16 07:01:58Z BalanaveenreddyKappeta $";
+
+
     String loggedOutAuthCode;
     String authCode;
     String transactionID;
     String harnessID;
 
     public HttpParamsBean() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
         this.loggedOutAuthCode = "";
         this.authCode = "";
         this.transactionID = "";

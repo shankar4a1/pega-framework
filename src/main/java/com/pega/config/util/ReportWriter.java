@@ -11,8 +11,8 @@ import java.io.*;
 import java.util.*;
 
 public class ReportWriter {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: ReportWriter.java 197981 2016-06-15 11:16:06Z SachinVellanki $";
+
+
     static List<File> filesList;
 
     static {
@@ -20,7 +20,7 @@ public class ReportWriter {
     }
 
     public ReportWriter() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     private static void parseFolders(final String dirPath) throws IOException {

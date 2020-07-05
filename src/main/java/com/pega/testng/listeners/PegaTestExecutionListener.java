@@ -16,7 +16,7 @@ import java.lang.reflect.*;
 import java.util.*;
 
 public class PegaTestExecutionListener extends TestListenerAdapter {
-    private static final String VERSION = "$Id: PegaTestExecutionListener.java 121818 2015-01-26 07:18:23Z SachinVellanki $";
+
     private WebDriver driver;
     boolean recordTest;
 

@@ -19,8 +19,8 @@ import java.security.cert.*;
 import java.util.*;
 
 public class HTTPUtil {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: HTTPUtil.java 209087 2016-09-23 09:15:55Z SachinVellanki $";
+
+
     private static String URL;
     private static String cookie;
 
@@ -30,7 +30,7 @@ public class HTTPUtil {
     }
 
     public HTTPUtil(final String url) {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
         HTTPUtil.URL = url;
     }
 

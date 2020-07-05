@@ -5,8 +5,8 @@ package com.pega.framework;
 import org.openqa.selenium.*;
 
 public interface WaitHandler {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: WaitHandler.java 190774 2016-05-04 09:14:20Z ShakkariSakethkumar $";
+
+
     String PORTAL_LOADING_XPATH = "//*[text()='Loading...']";
     By ALL_OPENED_TABS = By.cssSelector("ul[class*='Temporary_top_tabsList'] li[role='tab']");
     By ALL_AVAILABLE_FRAMES = By.xpath("//iframe[contains(@id,'PegaGadget')]");

@@ -7,8 +7,8 @@ import org.openqa.selenium.*;
 import java.util.*;
 
 public class GlobalConstants {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: GlobalConstants.java 200183 2016-06-24 05:43:37Z SachinVellanki $";
+
+
     private static int GLOBAL_TIMEOUT;
     public static final int THROBBER_INITIAL_WAIT_TIMEOUT = 3;
     private static String ACTIVE_FRAME_ID;
@@ -51,7 +51,7 @@ public class GlobalConstants {
     }
 
     public GlobalConstants() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static int getGLOBAL_TIMEOUT() {

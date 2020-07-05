@@ -6,7 +6,7 @@ import com.pega.framework.elmt.*;
 import com.pega.util.*;
 
 public interface Wizard extends Frame {
-    String VERSION = "$Id: Wizard.java 208871 2016-09-15 13:06:30Z VenkatasrikarVadlamudi $";
+
     String REFRESH_BTN_XPATH = XPathUtil.getMenuItemXPath("Refresh");
     String ACTION_BUTTON_XPATH = XPathUtil.getButtonpzButtonXpath(LocalizationUtil.getLocalizedWord("Actions")) + "|" + XPathUtil.getButtonPzBtnMidXPath("Actions");
     String HEADER_AGENTS_DIV_XPATH = "//*[text()='Agents']";

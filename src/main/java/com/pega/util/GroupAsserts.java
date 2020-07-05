@@ -9,8 +9,8 @@ import org.testng.*;
 import java.util.*;
 
 public class GroupAsserts {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: GroupAsserts.java 198173 2016-06-16 05:13:57Z PavanBeri $";
+
+
     private static List<String> assertionFailures;
 
     static {
@@ -18,7 +18,7 @@ public class GroupAsserts {
     }
 
     public GroupAsserts() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static void assertTrue(final boolean condition, final String message) {
@@ -75,7 +75,7 @@ public class GroupAsserts {
         Reporter.log("Group assertEquals statement executed for Expected: " + expected + " Actual: " + actual, true);
     }
 
-    public static void throwAssertFailures(final TestEnvironment testEnv) throws GroupAssertException {
+    public static void throwAssertFailures(final TestEnvironment testEnv, String description) throws GroupAssertException {
         String message = "";
         if (GroupAsserts.assertionFailures.size() > 0) {
             final Iterator iterator = GroupAsserts.assertionFailures.iterator();
@@ -83,7 +83,7 @@ public class GroupAsserts {
                 message = message + iterator.next() + "\n";
             }
             GroupAsserts.assertionFailures.clear();
-            ScreenshotUtil.captureScreenshot(testEnv);
+            ScreenshotUtil.captureScreenshot(testEnv, description);
         }
         if (!message.equals("")) {
             throw new GroupAssertException(message);

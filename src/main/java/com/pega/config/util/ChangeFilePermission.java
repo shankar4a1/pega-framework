@@ -7,11 +7,10 @@ import org.apache.commons.io.*;
 import java.io.*;
 
 public class ChangeFilePermission {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: ChangeFilePermission.java 209205 2016-09-29 02:40:12Z SachinVellanki $";
+
 
     public ChangeFilePermission() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static void main(final String[] args) throws IOException, InterruptedException {

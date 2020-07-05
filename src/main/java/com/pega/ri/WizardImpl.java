@@ -13,7 +13,7 @@ public class WizardImpl extends FrameImpl implements Wizard {
     String ORGANIZATION_EXPAND_XPATH;
     String DIV_EXPAND_XPATH;
     String UNIT_BUTTON_XPATH;
-    private static final String VERSION = "$Id: WizardImpl.java 198674 2016-06-17 12:51:56Z ShakkariSakethkumar $";
+
     private static final Logger LOGGER;
 
     static {

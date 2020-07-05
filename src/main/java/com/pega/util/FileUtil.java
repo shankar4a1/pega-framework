@@ -17,11 +17,10 @@ import java.nio.file.*;
 import java.util.*;
 
 public class FileUtil {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: FileUtil.java 196823 2016-06-09 10:40:53Z ShakkariSakethkumar $";
+
 
     public FileUtil() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static String readFile(final String filePath) {

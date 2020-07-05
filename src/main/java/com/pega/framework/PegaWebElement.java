@@ -12,8 +12,8 @@ import java.awt.Point;
 import java.util.*;
 
 public interface PegaWebElement extends WebElement, Instance {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: PegaWebElement.java 174698 2016-02-08 08:24:26Z SachinVellanki $";
+
+
     String AUTO_SELECTBOX_ID = "ISnsSelect";
 
     String getId();

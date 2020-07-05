@@ -7,7 +7,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.*;
 
 public class KeyboardImpl implements Keyboard {
-    private static final String VERSION = "$Id: KeyboardImpl.java 121818 2015-01-26 07:18:23Z SachinVellanki $";
+
     private Actions actions;
     private WebDriver driver;
     private org.openqa.selenium.interactions.Keyboard keyboard;

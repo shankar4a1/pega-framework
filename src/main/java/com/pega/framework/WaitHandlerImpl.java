@@ -16,7 +16,7 @@ import java.util.*;
 import java.util.function.*;
 
 public class WaitHandlerImpl implements WaitHandler {
-    private static final String VERSION = "$Id: WaitHandlerImpl.java 190774 2016-05-04 09:14:20Z ShakkariSakethkumar $";
+
     private static final Logger LOGGER;
     private PegaWebDriver pegaDriver;
     private WebDriver driver;

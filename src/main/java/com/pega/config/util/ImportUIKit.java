@@ -15,14 +15,14 @@ import java.util.*;
 import java.util.regex.*;
 
 public class ImportUIKit {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: ImportUIKit.java 208640 2016-09-11 09:06:18Z SachinVellanki $";
+
+
     private String pega7ExpRulesets;
     private static String buildwatcherApps;
     private static String pega7ExpApps;
 
     public ImportUIKit() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static void main(final String[] args) throws Exception {

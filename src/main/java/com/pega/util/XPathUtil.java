@@ -3,11 +3,10 @@
 package com.pega.util;
 
 public class XPathUtil {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: XPathUtil.java 208767 2016-09-13 18:24:16Z SachinVellanki $";
+
 
     public XPathUtil() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static String getDataTestIDXpath(final String dataTestID) {

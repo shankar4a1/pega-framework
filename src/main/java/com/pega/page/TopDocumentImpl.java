@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.*;
 import java.util.*;
 
 public class TopDocumentImpl implements TopDocument {
-    private static final String VERSION = "$Id: PegaWebDriverImpl.java 195418 2016-06-01 08:59:34Z AnilBattinapati $";
+
     protected PegaWebDriver pegaDriver;
     protected TestEnvironment testEnv;
     protected ScriptExecutor scriptExecutor;

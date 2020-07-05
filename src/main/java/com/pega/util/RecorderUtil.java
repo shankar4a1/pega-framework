@@ -10,14 +10,14 @@ import java.awt.*;
 import java.io.*;
 
 public class RecorderUtil extends ScreenRecorder {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: RecorderUtil.java 125139 2015-02-22 15:23:22Z SachinVellanki $";
+
+
     private String name;
     private static RecorderUtil screenRecorder;
 
     public RecorderUtil(final GraphicsConfiguration cfg, final Rectangle captureArea, final Format fileFormat, final Format screenFormat, final Format mouseFormat, final Format audioFormat, final File movieFolder, final String name) throws IOException, AWTException {
         super(cfg, captureArea, fileFormat, screenFormat, mouseFormat, audioFormat, movieFolder);
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
         this.name = name;
     }
 

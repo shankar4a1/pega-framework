@@ -1,5 +1,3 @@
-
-
 package com.pega;
 
 import com.pega.config.*;
@@ -11,7 +9,7 @@ import java.io.*;
 import java.util.*;
 
 public class ConfigurationImpl implements Configuration {
-    private static final String VERSION = "$Id: ConfigurationImpl.java 208262 2016-08-30 13:11:32Z BalanaveenreddyKappeta $";
+
     private Boolean isEnableFullScreenMode;
     private Properties prop;
     private Properties usersProperties;

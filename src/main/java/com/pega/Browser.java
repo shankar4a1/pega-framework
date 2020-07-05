@@ -7,8 +7,8 @@ import com.pega.page.*;
 import com.pega.util.*;
 
 public interface Browser {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: Browser.java 201415 2016-06-30 11:34:15Z AnilBattinapati $";
+
+
     String BROWSER_IMPL_LOGIN_ID = "txtUserID";
     String BROWSER_IMPL_PASSWORD_ID = "txtPassword";
     String BROWSER_IMPL_LOGIN_BUTTON_NAME = "pyActivity=Code-Security.Login";

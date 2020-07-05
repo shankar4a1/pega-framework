@@ -7,7 +7,7 @@ import com.pega.util.*;
 import org.openqa.selenium.*;
 
 public class AutoCompleteImpl extends PegaWebElementImpl implements AutoComplete {
-    private static final String VERSION = "$Id: AutoCompleteImpl.java 209067 2016-09-22 18:28:50Z SachinVellanki $";
+
 
     public AutoCompleteImpl(final WebElement elmt) {
         super(elmt);

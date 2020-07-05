@@ -10,7 +10,7 @@ import org.slf4j.*;
 
 public class TouchActionsImpl extends TouchAction implements TouchActions {
     private static final Logger LOGGER;
-    private static final String VERSION = "$Id: MouseImpl.java 121818 2015-01-26 07:18:23Z BalaKappeta $";
+
     private AppiumDriver driver;
     ImmutableList.Builder parameterBuilder;
 

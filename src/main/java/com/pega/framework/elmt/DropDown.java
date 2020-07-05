@@ -8,8 +8,7 @@ import org.openqa.selenium.*;
 import java.util.*;
 
 public interface DropDown extends PegaWebElement {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: DropDown.java 125139 2015-02-22 15:23:22Z SachinVellanki $";
+
 
     boolean isMultiple();
 

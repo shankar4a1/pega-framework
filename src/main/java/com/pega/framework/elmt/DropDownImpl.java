@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.*;
 import java.util.*;
 
 public class DropDownImpl extends PegaWebElementImpl implements DropDown {
-    private static final String VERSION = "$Id: DropDownImpl.java 208484 2016-09-06 14:05:05Z PavanBeri $";
+
     private Select selectbox;
 
     public DropDownImpl(final WebElement elmt) {

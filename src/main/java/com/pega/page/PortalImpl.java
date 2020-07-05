@@ -12,7 +12,7 @@ import org.slf4j.*;
 import java.util.*;
 
 public class PortalImpl implements Portal {
-    private static final String VERSION = "$Id: PortalImpl.java 186528 2016-04-09 12:01:15Z SachinVellanki $";
+
     private static final Logger LOGGER;
     protected PegaWebDriver pegaDriver;
     protected TestEnvironment testEnv;

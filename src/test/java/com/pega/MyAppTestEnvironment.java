@@ -12,12 +12,9 @@ import java.io.*;
 
 @ScenarioScoped
 public class MyAppTestEnvironment extends TestBase{
-	
-	
-	String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-	String VERSION = "$Id: MyTestEnvironment.java 209030 2016-09-22 06:52:49Z SachinVellanki $";
 
-	private Browser browser;
+
+    private Browser browser;
 	private Scenario scenario;
 
 	@Override

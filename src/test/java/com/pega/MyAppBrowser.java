@@ -45,23 +45,81 @@ public class MyAppBrowser extends BrowserImpl {
 
 	@Given("^A User logs in with \"(.*?)\" and \"(.*?)\"$")
 	public void login(String username, String password) {
-		open();
-		super.login(username, password);
-		ScreenshotUtil.captureScreenshot(myAppTestEnv);
+        open();
+        super.login(username, password);
 
-
-	}
+        ScreenshotUtil.captureScreenshot(myAppTestEnv, "LoginPage");
+    }
 
 	@When("^User logs off from portal$")
 	public void user_logs_off_from_portal() {
-		super.logout();
-	}
+        super.logout();
+    }
 
-	@Given("^A User logs in with Administrator credentials$")
-	public void a_User_logs_in_with_Administrator_credentials() {
-		open();
-		super.login(configuration.getCredential("ADMIN_USER_ID"), configuration.getCredential("ADMIN_PASSWORD"));
-	}
+    @Given("^A User logs in with Administrator credentials$")
+    public void a_User_logs_in_with_Administrator_credentials() {
+        open();
+        super.login(configuration.getCredential("ADMIN_USER_ID"), configuration.getCredential("ADMIN_PASSWORD"));
+    }
+
+
+	/*@Given("^navigates to \"([^\"]*)\" List page$")
+	public void navigates_to_page(String LeftNavItem) {
+		sfaPortal = getPortal(SFAPortal.class);
+
+		switch (LeftNavItem) {
+			case "Organizations": {
+				orgList = sfaPortal.getLeftNav().getOrganizationList();
+				break;
+			}
+			case "Households": {
+				hhList = sfaPortal.getLeftNav().getHouseholdList();
+				break;
+			}
+			case "Accounts": {
+				accList = sfaPortal.getLeftNav().getAccountList();
+				break;
+			}
+			case "Contacts": {
+				conList = sfaPortal.getLeftNav().getContactList();
+				break;
+			}
+			case "Leads": {
+				leadList = sfaPortal.getLeftNav().getLeadsList();
+				break;
+			}
+			case "Opportunities": {
+
+				String CAMPAIGN_LIST_XPATH = "//span[text()='Campaign']";
+
+				if (pegaDriver.verifyElement(By.xpath(CAMPAIGN_LIST_XPATH)))
+					campaignExists = true;
+				oppList = sfaPortal.getLeftNav().getOpportunityList();
+				break;
+			}
+			case "Territories": {
+				terrList = sfaPortal.getLeftNav().getTerritoriesList();
+				break;
+			}
+			case "Operators": {
+				oprList = sfaPortal.getLeftNav().getOperatorsList();
+				break;
+			}
+			case "Partners": {
+				parList = sfaPortal.getLeftNav().getPartnersList();
+				break;
+			}
+			case "Forecast": {
+				forecast = sfaPortal.getLeftNav().getForecast();
+				break;
+			}
+			case "Close plans": {
+				closeplans = sfaPortal.getLeftNav().getClosePlans();
+				break;
+			}
+
+		}
+	}*/
 
 
 }

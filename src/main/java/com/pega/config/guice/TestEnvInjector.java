@@ -8,11 +8,10 @@ import com.pega.exceptions.*;
 import org.testng.*;
 
 public class TestEnvInjector extends AbstractModule {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: TestEnvInjector.java 174698 2016-02-08 08:24:26Z SachinVellanki $";
+
 
     public TestEnvInjector() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     protected void configure() {

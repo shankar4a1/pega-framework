@@ -9,8 +9,7 @@ import java.io.*;
 import java.util.*;
 
 public interface PegaHttpPost extends PegaHttpUriRequest {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: PegaHttpPost.java 208360 2016-09-01 11:47:23Z PrashantSammeta $";
+
 
     HttpPost getHttpPost();
 

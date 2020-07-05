@@ -7,8 +7,8 @@ import org.slf4j.*;
 import java.awt.*;
 
 public class RobotKeyboardImpl implements RobotKeyboard {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: RobotKeyboardImpl.java 170459 2016-01-08 12:18:51Z ChanukyaVempati $";
+
+
     private static final Logger LOGGER;
     private Robot robot;
 
@@ -17,7 +17,7 @@ public class RobotKeyboardImpl implements RobotKeyboard {
     }
 
     public RobotKeyboardImpl() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
         this.robot = null;
         try {
             this.robot = new Robot();

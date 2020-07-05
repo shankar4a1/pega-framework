@@ -15,7 +15,7 @@ import java.util.*;
 import java.util.regex.*;
 
 public class LocalizationUtil {
-    private static final String VERSION = "$Id: LocalizationUtil.java 208834 2016-09-14 19:37:32Z SachinVellanki $";
+
     public static final String language;
     private static String languageBundlePath;
     protected static Properties translatedProperties;

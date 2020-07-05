@@ -6,8 +6,7 @@ import io.appium.java_client.*;
 import org.openqa.selenium.*;
 
 public interface TouchActions {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: Mouse.java 125139 2015-02-22 15:23:22Z BalaKappeta $";
+
 
     TouchAction press(final WebElement p0);
 

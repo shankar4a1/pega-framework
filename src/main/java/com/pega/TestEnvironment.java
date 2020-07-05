@@ -14,8 +14,7 @@ import org.openqa.selenium.interactions.*;
 import java.io.*;
 
 public interface TestEnvironment {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: TestEnvironment.java 170459 2016-01-08 12:18:51Z ChanukyaVempati $";
+
 
     void terminate();
 

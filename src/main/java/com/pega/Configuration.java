@@ -7,8 +7,7 @@ import com.pega.config.*;
 import java.util.*;
 
 public interface Configuration {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: Configuration.java 195388 2016-06-01 06:55:22Z PavanBeri $";
+
 
     DriversConfig getDriversConfig();
 

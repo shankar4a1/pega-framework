@@ -5,11 +5,10 @@ package com.pega.config.util;
 import java.io.*;
 
 public class RefactorMethodsCalls {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: RefactorMethodsCalls.java 184148 2016-03-29 05:25:11Z SachinVellanki $";
+
 
     public RefactorMethodsCalls() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static void main(final String[] a) {

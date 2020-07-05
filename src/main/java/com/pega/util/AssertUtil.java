@@ -8,11 +8,10 @@ import org.jsoup.nodes.*;
 import java.util.regex.*;
 
 public class AssertUtil {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: AssertUtil.java 174698 2016-02-08 08:24:26Z SachinVellanki $";
+
 
     public AssertUtil() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     public static boolean validateRegex(final String regex, final String content) {

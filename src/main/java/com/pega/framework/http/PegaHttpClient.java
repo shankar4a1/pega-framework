@@ -6,8 +6,7 @@ import com.pega.*;
 import org.apache.http.client.*;
 
 public interface PegaHttpClient {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: PegaHttpClient.java 208547 2016-09-07 19:32:44Z PrashantSammeta $";
+
 
     PegaHttpResponse execute(final PegaHttpUriRequest p0);
 

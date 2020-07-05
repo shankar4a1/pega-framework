@@ -9,11 +9,10 @@ import java.net.*;
 import java.util.regex.*;
 
 public class FetchPRPCEnvDetails {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: FetchPRPCEnvDetails.java 133417 2015-04-22 15:11:31Z PavanBeri $";
+
 
     public FetchPRPCEnvDetails() {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
     }
 
     private String fetchSysInfo(final String url) throws IOException {

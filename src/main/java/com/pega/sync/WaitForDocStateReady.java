@@ -11,8 +11,8 @@ import org.slf4j.*;
 import java.util.*;
 
 public class WaitForDocStateReady {
-    String COPYRIGHT;
-    private static final String VERSION = "$Id: WaitForDocStateReady.java 164932 2015-11-23 13:49:36Z BalanaveenreddyKappeta $";
+
+
     private static final Logger LOGGER;
     private PegaWebDriver pegaDriver;
     private int QUIET_START;
@@ -32,7 +32,7 @@ public class WaitForDocStateReady {
     }
 
     public WaitForDocStateReady(final PegaWebDriver pegaDriver) {
-        this.COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
+
         this.pegaDriver = null;
         this.QUIET_START = 1000;
         this.gStopWatch = new StopWatch();

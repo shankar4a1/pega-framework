@@ -5,8 +5,7 @@ package com.pega.framework;
 import org.openqa.selenium.*;
 
 public interface ScriptExecutor {
-    String COPYRIGHT = "Copyright (c) 2014  Pegasystems Inc.";
-    String VERSION = "$Id: ScriptExecutor.java 178345 2016-02-25 14:12:15Z BalanaveenreddyKappeta $";
+
 
     @Deprecated
     void clear(final String p0);
